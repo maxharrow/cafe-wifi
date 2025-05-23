@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol>
+    {% for cafe in all_cafes: %}
+    <li>
+        <ul>
+            {% for key,value in cafe.to_dict().items():%}
+            <li>
+                {{key}}: {{value}}
+            </li>
+
+
+            {% endfor %}
+        </ul>
+
+    </li>
+    {% endfor %}
+</ol>
+</body>
+</html>
